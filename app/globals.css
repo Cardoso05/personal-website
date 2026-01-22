@@ -1,0 +1,335 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #829ab1;
+  --color-navy-500: #627d98;
+  --color-navy-600: #486581;
+  --color-navy-700: #334e68;
+  --color-navy-800: #243b53;
+  --color-navy-900: #102a43;
+  --color-navy-950: #0a1929;
+}
+
+/* ========================================
+   SISTEMA DE TEMAS (Light/Dark)
+   ======================================== */
+
+:root {
+  /* Tema claro (padrão) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
+  
+  --text-primary: var(--color-navy-900);
+  --text-secondary: var(--color-navy-800);
+  --text-muted: var(--color-navy-600);
+  --text-subtle: var(--color-navy-500);
+  
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  
+  --accent: var(--color-navy-600);
+  --accent-hover: var(--color-navy-700);
+  
+  --btn-bg: var(--color-navy-700);
+  --btn-hover: var(--color-navy-800);
+  --btn-text: #ffffff;
+  
+  --code-bg: #f1f5f9;
+  --code-border: #e2e8f0;
+  
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+}
+
+/* Tema escuro */
+:root.dark {
+  --bg-primary: var(--color-navy-950);
+  --bg-secondary: var(--color-navy-900);
+  --bg-card: var(--color-navy-900);
+  --bg-hover: var(--color-navy-800);
+  
+  --text-primary: var(--color-navy-50);
+  --text-secondary: var(--color-navy-100);
+  --text-muted: var(--color-navy-300);
+  --text-subtle: var(--color-navy-400);
+  
+  --border-primary: var(--color-navy-700);
+  --border-secondary: var(--color-navy-800);
+  
+  --accent: var(--color-navy-400);
+  --accent-hover: var(--color-navy-300);
+  
+  --btn-bg: var(--color-navy-700);
+  --btn-hover: var(--color-navy-600);
+  --btn-text: var(--color-navy-50);
+  
+  --code-bg: var(--color-navy-800);
+  --code-border: var(--color-navy-700);
+  
+  --scrollbar-track: var(--color-navy-900);
+  --scrollbar-thumb: var(--color-navy-600);
+}
+
+/* ========================================
+   ESTILOS BASE
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ========================================
+   TIPOGRAFIA PARA ARTIGOS
+   ======================================== */
+
+.prose {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h1 { font-size: 1.5rem; }
+.prose h2 { font-size: 1.25rem; }
+.prose h3 { font-size: 1.125rem; }
+
+@media (min-width: 768px) {
+  .prose h1 { font-size: 1.875rem; }
+  .prose h2 { font-size: 1.5rem; }
+  .prose h3 { font-size: 1.25rem; }
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .prose p { font-size: 1.125rem; }
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li {
+  list-style-type: disc;
+}
+
+.prose ol li {
+  list-style-type: decimal;
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: var(--accent-hover);
+}
+
+.prose code {
+  background-color: var(--code-bg);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.prose pre {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 1rem 0;
+}
+
+.prose strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.prose hr {
+  border-color: var(--border-primary);
+  margin: 2rem 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.prose th, .prose td {
+  border: 1px solid var(--border-primary);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose th {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   COMPONENTES COM TEMA
+   ======================================== */
+
+/* Cards */
+.theme-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-card:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Botões */
+.theme-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  transition: background-color 0.2s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Inputs */
+.theme-input {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-primary);
+  color: var(--text-secondary);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-input:focus {
+  border-color: var(--accent);
+}
+
+.theme-input::placeholder {
+  color: var(--text-subtle);
+}
+
+/* ========================================
+   UTILITÁRIOS
+   ======================================== */
+
+/* Progress bar de leitura */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--accent);
+  z-index: 50;
+  transition: width 0.1s;
+}
+
+/* Scrollbar minimalista */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-subtle);
+}
+
+/* Safe area para mobile */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
+  }
+}
+
+/* Animações sutis */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Transição suave para elementos com tema */
+* {
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* Exceções de transição (para performance) */
+*:not(.theme-card):not(.theme-btn):not(.theme-input):not(body) {
+  transition-property: none;
+}

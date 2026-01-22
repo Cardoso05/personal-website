@@ -1,0 +1,79 @@
+---
+title: "Como eu documento projetos para não virar caos"
+slug: "como-documento-projetos"
+description: "Meu sistema de documentação que mantém projetos organizados mesmo meses depois."
+date: "2025-12-15"
+category: "operacao-processos"
+tags: ["documentação", "organização", "projetos"]
+author: "Matheus"
+---
+
+Já voltou em um projeto depois de meses e não entendeu nada? Eu também. Por isso criei esse sistema.
+
+## O problema
+
+Código sem contexto é inútil. Decisões sem registro são esquecidas. Setup sem instruções é frustração garantida.
+
+## Minha estrutura de documentação
+
+### 1. README.md (obrigatório)
+
+Todo projeto tem um README com:
+
+- **O quê**: descrição em 1 parágrafo
+- **Por quê**: problema que resolve
+- **Como rodar**: passo a passo de setup
+- **Como contribuir**: se aplicável
+
+### 2. DECISIONS.md
+
+Registro de decisões importantes:
+
+```markdown
+## 2026-01-15: Escolha do banco de dados
+
+**Contexto**: Precisamos de um banco para o MVP
+**Decisão**: Supabase (PostgreSQL)
+**Motivo**: Free tier generoso, auth integrado, real-time
+**Alternativas**: PlanetScale, Neon
+```
+
+### 3. CHANGELOG.md
+
+O que mudou em cada versão:
+
+```markdown
+## [0.2.0] - 2026-01-10
+### Adicionado
+- Sistema de autenticação
+- Página de perfil
+### Corrigido
+- Bug no formulário de cadastro
+```
+
+### 4. Comentários estratégicos no código
+
+Não comento O QUE o código faz, mas POR QUE faz assim:
+
+```javascript
+// Usamos cache de 5min porque a API externa tem rate limit de 100 req/min
+// Se mudar o rate limit, ajustar TTL proporcionalmente
+```
+
+## Ferramentas
+
+- **Notion**: documentação de projeto e decisões
+- **GitHub**: README, CHANGELOG, código comentado
+- **Loom**: vídeos curtos para explicar fluxos complexos
+
+## Checklist de documentação
+
+- [ ] README com setup funcionando?
+- [ ] Decisões importantes registradas?
+- [ ] Changelog atualizado?
+- [ ] Código com comentários de "por quê"?
+- [ ] Variáveis de ambiente documentadas?
+
+---
+
+Documentação é presente para o eu do futuro. [Veja mais sobre organização](/conteudos?category=operacao-processos).
