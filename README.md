@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Site Pessoal - cardosomatheus.com.br
 
 Hub de conteúdo pessoal sobre SaaS, automação, RPA, marketing e growth.
@@ -137,3 +138,7 @@ O site está configurado para deploy automático na Vercel:
 ---
 
 Feito com 💙 por Matheus Cardoso
+=======
+# personal-website
+Meu site pessoal
+>>>>>>> d8af1fa5d37c713b06eb7117f3fdb52db06e0c91
