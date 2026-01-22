@@ -1,0 +1,103 @@
+---
+title: "Notícias do Digital — MCP: IA operando Power BI e Excel"
+slug: "noticias-digital-mcp-powerbi-excel"
+description: "O que muda quando a IA para de só responder e passa a executar rotinas de BI com permissão, log e controle."
+date: "2026-01-21"
+category: "marketing-growth"
+series: "noticias-do-digital"
+tags: ["mcp", "agentes", "power-bi", "excel", "analytics"]
+author: "Matheus"
+---
+
+Toda semana aparece uma “integração nova” de IA. Mas essa aqui é diferente: é sobre a IA **executar trabalho**, não só conversar.
+
+## A notícia do dia
+
+A GoodData anunciou um **MCP Server** para permitir que agentes e LLMs executem analytics de ponta a ponta com governança: métricas, dashboards e alertas.
+
+A ideia é simples: sair do modo “chat que responde” e ir para “agente que opera”.
+
+## O que é MCP (sem enrolação)
+
+MCP (Model Context Protocol) é um **padrão** para a IA chamar **ações reais** de ferramentas (tools) com permissão e regras.
+
+Em vez de você copiar e colar dados no chat, o agente conversa com a ferramenta por um caminho controlado:
+- o que pode fazer
+- quem pode fazer
+- como registra o que foi feito
+
+## Por que falar de Power BI e Excel (exemplos conhecidos)
+
+Muita gente entende BI por dois caminhos:
+
+### Power BI e semantic model
+
+No Power BI, o **semantic model** é a camada que define o significado do negócio:
+o que é “Receita”, “CAC”, “MRR” e como esses números são calculados.
+
+Quando um agente consegue trabalhar em cima disso, ele deixa de “chutar número” e passa a usar a **mesma fonte de verdade** do seu BI.
+
+### Excel (o clássico do dia a dia)
+
+Excel continua sendo o “sistema operacional” de muita operação pequena.
+Se o agente consegue ler e escrever planilha (células, abas, fórmulas), você automatiza rotinas que hoje travam tempo e geram erro humano.
+
+## O que muda no seu workflow (pra pequeno empreendedor)
+
+Antes, a IA ajudava assim:
+- “me diga o número”
+- “me explique o relatório”
+- “gere uma análise do dashboard”
+
+Com MCP e servidores que expõem ações, vira outra categoria:
+- “gera o relatório semanal”
+- “atualiza o dashboard”
+- “cria um alerta se a conversão cair”
+- “registra o que foi feito e por quê”
+
+O ganho real não é “mais inteligência”.
+É **menos fricção** para executar processo, com **controle** para não virar bagunça.
+
+## Onde isso vira produto (micro-SaaS)
+
+Esse tipo de integração abre espaço para micro-SaaS de “agente confiável”:
+- permissões (o que o agente pode mexer)
+- logs (o que ele fez)
+- auditoria (por que fez)
+- execução em sequência (workflow)
+
+É a diferença entre “IA legal” e “IA que dá para vender”.
+
+## Ação prática (o que eu faria hoje)
+
+Escolhe **uma rotina** e transforma em pipeline:
+
+1) Buscar métricas  
+2) Montar resumo no seu formato  
+3) Atualizar dashboard ou planilha  
+4) Criar alerta para variação fora do padrão  
+5) Registrar log da execução  
+
+Começa pequeno, mas com trilho.
+
+## Checklist para não virar caos
+
+- [ ] Definir quais ações o agente pode executar
+- [ ] Separar modo leitura e modo escrita
+- [ ] Registrar logs de cada execução
+- [ ] Ter limite de permissão por usuário/role
+- [ ] Definir “métrica fora do padrão” com regra clara
+
+## Fontes (links)
+
+- GoodData (anúncio do MCP Server): https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/gooddata-announces-launch-of-mcp-server-to-let-ai-execute-analyti-1128987  
+- GoodData (docs do MCP Server): https://www.gooddata.com/docs/cloud/experimental-features/mcp-server/  
+- Microsoft Power BI (documentação MCP): https://learn.microsoft.com/en-us/power-bi/developer/mcp/  
+- Microsoft Power BI (overview de MCP servers): https://learn.microsoft.com/en-us/power-bi/developer/mcp/mcp-servers-overview  
+- Power BI Modeling MCP Server (GitHub, preview): https://github.com/microsoft/powerbi-modeling-mcp  
+- Excel MCP Server (exemplo de servidor para planilhas): https://github.com/negokaz/excel-mcp-server  
+- MCP spec (referência do protocolo): https://modelcontextprotocol.info/specification/2024-11-05/server/  
+
+---
+
+Se você quer mais conteúdo assim, eu posto o diagrama do fluxo e exemplos de rotina (relatório semanal) usando Power BI e Excel. [Veja a série completa](/series/noticias-do-digital).
