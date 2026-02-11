@@ -52,9 +52,9 @@ export const siteConfig = {
     {
       name: "InspireAI",
       slug: "inspireai",
-      description: "Inteligencia Artificial para Criadores de Conteúdo",
+      description: "SaaS de inteligência artificial para criadores de conteúdo que desejam crescer com estratégia e consistência.",
       url: "https://inspireai.com.br",
-      status: "em desenvolvimento",
+      status: "em crescimento",
     },
     {
       name: "MyNewsToday",
