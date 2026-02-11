@@ -30,24 +30,28 @@ export const siteConfig = {
   projects: [
     {
       name: "Delmat Engenharia",
+      slug: "delmat",
       description: "Desenvolvendo um CRM/ERP",
       url: "#",
       status: "em desenvolvimento",
     },
     {
       name: "Wipr",
+      slug: "wipr",
       description: "Minha Empresa de Desenvolvimento de Ferramentas de Automação",
       url: "https://wipr.com.br",
       status: "ativo",
     },
     {
       name: "BealiveApp",
+      slug: "bealiveapp",
       description: "Aplicativo para Psicologas Gerenciarem os Pacientes",
       url: "https://bealiveapp.com.br",
       status: "em desenvolvimento",
     },
     {
       name: "InspireAI",
+      slug: "inspireai",
       description: "Inteligencia Artificial para Criadores de Conteúdo",
       url: "https://inspireai.com.br",
       status: "em desenvolvimento",

@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
+import { getAllProjectSlugs } from "@/lib/projects";
 import { series } from "@/lib/series";
 import { siteConfig } from "@/config/site";
 
@@ -69,5 +70,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...postPages, ...seriesPages];
+  // Páginas de projetos
+  const projectSlugs = getAllProjectSlugs();
+  const projectPages: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({
+    url: `${baseUrl}/projetos/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...postPages, ...seriesPages, ...projectPages];
 }

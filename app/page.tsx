@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="animate-fadeIn">
       <Hero />
+      <FeaturedProjects />
       <StartHere />
       <LatestPosts />
       <SeriesGrid />
-      <FeaturedProjects />
     </div>
   );
 }

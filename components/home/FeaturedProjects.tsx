@@ -29,7 +29,7 @@ export function FeaturedProjects() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {siteConfig.projects.slice(0, 3).map((project) => (
-            <Card key={project.name} href={project.url} hover>
+            <Card key={project.name} href={`/projetos/${project.slug}`} hover>
               <CardTitle>{project.name}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
               <CardMeta>

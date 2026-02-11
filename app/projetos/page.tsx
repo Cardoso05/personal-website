@@ -28,7 +28,7 @@ export default function ProjetosPage() {
 
       <div className="grid gap-6 sm:grid-cols-2">
         {siteConfig.projects.map((project) => (
-          <Card key={project.name} href={project.url} className="p-6">
+          <Card key={project.name} href={`/projetos/${project.slug}`} className="p-6">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
                 <CardTitle className="text-xl mb-2">{project.name}</CardTitle>
