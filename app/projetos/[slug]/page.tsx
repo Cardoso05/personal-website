@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
+import { getProjectBySlug, getAllProjectSlugs, getProjectContent } from "@/lib/projects";
 import { Tag } from "@/components/ui/Tag";
+import { PostContent } from "@/components/post/PostContent";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -42,6 +43,7 @@ function hasValidUrl(url: string): boolean {
 export default async function ProjectPage({ params }: PageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
+  const projectContent = getProjectContent(slug);
 
   if (!project) {
     notFound();
@@ -73,12 +75,20 @@ export default async function ProjectPage({ params }: PageProps) {
           </Tag>
         </div>
 
-        <p
-          className="text-lg"
-          style={{ color: "var(--text-secondary)" }}
-        >
-          {project.description}
-        </p>
+        {!projectContent && (
+          <p
+            className="text-lg"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            {project.description}
+          </p>
+        )}
+
+        {projectContent && (
+          <div className="pt-2">
+            <PostContent content={projectContent.content} />
+          </div>
+        )}
 
         {hasValidUrl(project.url) ? (
           <a

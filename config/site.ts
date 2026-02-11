@@ -29,11 +29,11 @@ export const siteConfig = {
   // Projetos em destaque
   projects: [
     {
-      name: "Delmat Engenharia",
-      slug: "delmat",
-      description: "Desenvolvendo um CRM/ERP",
+      name: "Delmat Engenharia & Tecnologia",
+      slug: "delmat-engenharia",
+      description: "Empresa de engenharia focada em obras corporativas rápidas, infraestrutura elétrica e tecnologia.",
       url: "#",
-      status: "em desenvolvimento",
+      status: "ativo",
     },
     {
       name: "Wipr",
@@ -43,11 +43,11 @@ export const siteConfig = {
       status: "ativo",
     },
     {
-      name: "BealiveApp",
+      name: "BeAlive App",
       slug: "bealiveapp",
-      description: "Aplicativo para Psicologas Gerenciarem os Pacientes",
+      description: "Plataforma de acompanhamento psicológico que economiza tempo do profissional e melhora a continuidade do cuidado.",
       url: "https://bealiveapp.com.br",
-      status: "em desenvolvimento",
+      status: "em validação",
     },
     {
       name: "InspireAI",
@@ -55,6 +55,13 @@ export const siteConfig = {
       description: "Inteligencia Artificial para Criadores de Conteúdo",
       url: "https://inspireai.com.br",
       status: "em desenvolvimento",
+    },
+    {
+      name: "MyNewsToday",
+      slug: "mynewstoday",
+      description: "Plataforma de curadoria automatizada de notícias sobre tecnologia, negócios e mercado digital.",
+      url: "https://mynewstoday.com.br",
+      status: "ativo",
     },
   ],
   
